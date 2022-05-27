@@ -13,7 +13,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.dogmap.presentation.AccountPage
 import com.example.dogmap.presentation.MainPage
-import com.example.dogmap.presentation.WidgetPage
 import com.example.dogmap.ui.theme.DogMapTheme
 
 class MainActivity : ComponentActivity() {
@@ -42,9 +41,6 @@ fun Operator(){
         }
         composable("AccountPage"){
             AccountPage(navController)
-        }
-        composable("WidgetPage"){
-            WidgetPage(navController)
         }
         composable("MapPage"){
             MapPage(navController)
