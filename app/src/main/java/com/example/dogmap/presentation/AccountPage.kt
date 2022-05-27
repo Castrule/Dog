@@ -25,8 +25,8 @@ import androidx.navigation.compose.rememberNavController
 import com.example.dogmap.R
 import com.example.dogmap.components.BottomBar
 import com.example.dogmap.components.EventWidget1
-import com.example.dogmap.components.EventWidget2
 import com.example.dogmap.components.TopBar
+import com.example.dogmap.modules.Dog
 
 
 @Composable
@@ -51,7 +51,7 @@ fun AccountPageBody(navController: NavHostController){
         Image(painter = painterResource(R.drawable.anon), contentDescription = "desc",
             modifier = Modifier.clip(RoundedCornerShape(100)).size(150.dp))
         Text("Василий Пупкин", fontWeight = FontWeight.Bold, fontSize = 30.sp)
-        Text("Волонтер с 17 мая 2022 года", color = Color.LightGray)
+        Text("Волонтер с 27 апреля 2022 года", color = Color.LightGray)
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.Center
@@ -69,18 +69,5 @@ fun AccountPageBody(navController: NavHostController){
         }
         Text("Рейтинг: 5 звёзд!", color = Color.LightGray,
             textAlign = TextAlign.Center, modifier = Modifier.padding(5.dp))
-        Text("Добрые дела:", modifier = Modifier.padding(PaddingValues(horizontal = 20.dp)).fillMaxWidth(),
-            fontWeight = FontWeight.Bold, fontSize = 30.sp)
-        Column(
-            modifier = Modifier
-                .verticalScroll(rememberScrollState())
-                .fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ){
-            EventWidget1(navController)
-            Spacer(modifier = Modifier.size(10.dp))
-            EventWidget2(navController)
-            Spacer(modifier = Modifier.size(10.dp))
-        }
     }
 }
